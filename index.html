@@ -1,0 +1,139 @@
+<html>
+<head>
+    <meta name="description" content="art">
+    <link rel="stylesheet" href="style.css" />
+    <title>hi</title>
+
+</head>
+<body>
+    today is the greatest, great things like art and today can be created through scraps<br />
+    forensic diagrams - They’re beautifully scary.  It’s the relationship between space and the violent event and the record of it. <br />
+    but the war is over our culture’s image of the human soul.<br />
+    dedicated to juta koether<br />
+    and I started Ulysse with the words, 'I used to see the image upside down.' There's an image of a goat on the ground, like a fallen constellation,<br />
+    The Psychoanalysis of Fire (1938) and The Poetics of Space (1958) can we do a bachelard reading group?<br />
+    certain personality traits were found to correspond to concrete elements in a kind of psychoanalysis of the material world<br />
+    There is nothing to be proud of, but happy.<br />
+    Strange hours of our life<br />
+    Desires managing me<br />
+    It’s about putting love where you’ve been told not to because you feel it so overwhelmingly<br />
+    You can’t appreciate the beauty of the world until you try to paint it<br />
+    then i somersaulted into the bright arc of midday<br />
+    and this transcendental moment was routinely followed by __<br />
+    the aim of art is to tidy up ones inner and outer worlds<br/>
+    i make sentences from objects<br />
+    when i was a kid we would holiday in the south of france, the house had a ghost and you could forage for pine nuts from the cones that fell into the garden.<br />
+    with what we gleaned i took some back to my friend's house and we made pesto to have with gnocchi. i took those days for granted<br />
+
+<script>
+    function screensaver(images){
+    var idleTime = 0;
+    var idleInterval = setInterval(timerIncrement, 10000); // 10 seconds
+  
+   document.body.onmousemove = function (e) {
+        idleTime = 0;
+    };
+   document.body.onkeypress = function (e) {
+      idleTime = 0;
+    };
+  
+  function timerIncrement() {
+    idleTime = idleTime + 1;
+    if (idleTime > 0 && document.getElementById('screensaver') == undefined) { 
+        var canvas = document.createElement('canvas');
+        canvas.id = 'screensaver';
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        canvas.style.padding = '0px';
+        canvas.style.margin = '0px';
+        canvas.style.zIndex = '9999';
+        canvas.style.position = 'fixed';
+        canvas.style.top = '0px';
+        canvas.style.left = '0px';
+        document.body.append(canvas);
+
+        var ctx = canvas.getContext('2d');
+        images.forEach(function(imgsrc){
+            var image = new Image();
+            image.src = imgsrc;
+            image.onload = function(){
+                window.requestAnimationFrame(draw);
+            }
+            var count = 0;
+            var rotation = 0;
+            function draw(){
+                var x = Math.random()*canvas.width;
+                var y = Math.random()*canvas.height;
+                var random = Math.random();
+                ctx.drawImage(image,x-50,y-50,image.width*(random)/3, image.height*(random)/3);
+                ctx.translate(canvas.width/2, canvas.height/2);
+                ctx.rotate(rotation*random);
+                ctx.translate(-canvas.width/2, -canvas.height/2);
+
+                count++;
+                rotation+=0.001;
+                if(count<3000){
+                window.requestAnimationFrame(draw);
+                }
+            }
+        })
+
+        
+        canvas.ontouch = function(){
+            document.body.removeChild(this);
+            return true;
+        }
+        
+        canvas.onmouseover = function(){
+            document.body.removeChild(this);
+            return true;
+        }
+  }
+  }
+    
+    }
+    screensaver(['keyring.png',
+    'keyring1.png',
+    'keyring2.png',
+    'light.png']);
+
+    console.log(`
+           ;               ,           
+         ,;                 '.         
+        ;:                   :;        
+       ::                     ::       
+       ::                     ::       
+       ':                     :        
+        :.                    :        
+     ;' ::                   ::  '     
+    .'  ';                   ;'  '.    
+   ::    :;                 ;:    ::   
+   ;      :;.             ,;:     ::   
+   :;      :;:           ,;"      ::   
+   ::.      ':;  ..,.;  ;:'     ,.;:   
+    "'"...   '::,::::: ;:   .;.;""'    
+        '"""....;:::::;,;.;"""         
+    .:::.....'"':::::::'",...;::::;.   
+   ;:' '""'"";.,;:::::;.'""""""  ':;   
+  ::'         ;::;:::;::..         :;  
+ ::         ,;:::::::::::;:..       :: 
+ ;'     ,;;:;::::::::::::::;";..    ':.
+::     ;:"  ::::::"""'::::::  ":     ::
+ :.    ::   ::::::;  :::::::   :     ; 
+  ;    ::   :::::::  :::::::   :    ;  
+   '   ::   ::::::....:::::'  ,:   '   
+    '  ::    :::::::::::::"   ::       
+       ::     ':::::::::"'    ::       
+       ':       """""""'      ::       
+        ::                   ;:        
+        ':;                 ;:"        
+          ';              ,;'          
+            "'           '"            
+              '
+`);
+
+screensaver();
+</script>
+
+</body>
+</html>

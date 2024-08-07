@@ -6,6 +6,7 @@
 
 </head>
 <body>
+    <iframe width="1052" height="592" src="https://www.youtube.com/embed/Xmn4IM0REds" title="IMG 8835" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br />
     today is the greatest, great things like art and today can be created through scraps<br />
     forensic diagrams - They're beautifully scary.  It's the relationship between space and the violent event and the record of it. <br />
     but the war is over our culture's image of the human soul.<br />
@@ -20,120 +21,123 @@
     You can't appreciate the beauty of the world until you try to paint it<br />
     then i somersaulted into the bright arc of midday<br />
     and this transcendental moment was routinely followed by __<br />
-    the aim of art is to tidy up ones inner and outer worlds<br/>
+    the aim of art is to tidy up ones inner and outer worlds<br />
     i make sentences from objects<br />
     when i was a kid we would holiday in the south of france, the house had a ghost and you could forage for pine nuts from the cones that fell into the garden.<br />
     with what we gleaned i took some back to my friend's house and we made pesto to have with gnocchi. i took those days for granted<br />
+    i work from awkwardness - by that i mean i don't like to arrange things. if i stand in front of something, instead of arranging it, i arrange myself<br />
+    today when i looked out of my window i spied an aeroplane moving peacefully like a gardener across grass.<br />have the birds always been this loud? do the insects always scream?<br />
+    when you kill an ant, do you imagine its personality?<br />
+    It all seemed to merge into this plane of consistency whose iteration was the cake I was baking<br />
 
-<script>
-    function screensaver(images){
-    var idleTime = 0;
-    var idleInterval = setInterval(timerIncrement, 10000); // 10 seconds
-  
-   document.body.onmousemove = function (e) {
-        idleTime = 0;
-    };
-   document.body.onkeypress = function (e) {
-      idleTime = 0;
-    };
-  
-  function timerIncrement() {
-    idleTime = idleTime + 1;
-    if (idleTime > 0 && document.getElementById('screensaver') == undefined) { 
-        var canvas = document.createElement('canvas');
-        canvas.id = 'screensaver';
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        canvas.style.padding = '0px';
-        canvas.style.margin = '0px';
-        canvas.style.zIndex = '9999';
-        canvas.style.position = 'fixed';
-        canvas.style.top = '0px';
-        canvas.style.left = '0px';
-        document.body.append(canvas);
+    <script>
+        function screensaver(images) {
+            var idleTime = 0;
+            var idleInterval = setInterval(timerIncrement, 10000); // 10 seconds
 
-        var ctx = canvas.getContext('2d');
-        images.forEach(function(imgsrc){
-            var image = new Image();
-            image.src = imgsrc;
-            image.onload = function(){
-                window.requestAnimationFrame(draw);
-            }
-            var count = 0;
-            var rotation = 0;
-            function draw(){
-                var x = Math.random()*canvas.width;
-                var y = Math.random()*canvas.height;
-                var random = Math.random();
-                ctx.drawImage(image,x-50,y-50,image.width*(random)/3, image.height*(random)/3);
-                ctx.translate(canvas.width/2, canvas.height/2);
-                ctx.rotate(rotation*random);
-                ctx.translate(-canvas.width/2, -canvas.height/2);
+            document.body.onmousemove = function (e) {
+                idleTime = 0;
+            };
+            document.body.onkeypress = function (e) {
+                idleTime = 0;
+            };
 
-                count++;
-                rotation+=0.001;
-                if(count<3000){
-                window.requestAnimationFrame(draw);
+            function timerIncrement() {
+                idleTime = idleTime + 1;
+                if (idleTime > 0 && document.getElementById('screensaver') == undefined) {
+                    var canvas = document.createElement('canvas');
+                    canvas.id = 'screensaver';
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+                    canvas.style.padding = '0px';
+                    canvas.style.margin = '0px';
+                    canvas.style.zIndex = '9999';
+                    canvas.style.position = 'fixed';
+                    canvas.style.top = '0px';
+                    canvas.style.left = '0px';
+                    document.body.append(canvas);
+
+                    var ctx = canvas.getContext('2d');
+                    images.forEach(function (imgsrc) {
+                        var image = new Image();
+                        image.src = imgsrc;
+                        image.onload = function () {
+                            window.requestAnimationFrame(draw);
+                        }
+                        var count = 0;
+                        var rotation = 0;
+                        function draw() {
+                            var x = Math.random() * canvas.width;
+                            var y = Math.random() * canvas.height;
+                            var random = Math.random();
+                            ctx.drawImage(image, x - 50, y - 50, image.width * (random) / 3, image.height * (random) / 3);
+                            ctx.translate(canvas.width / 2, canvas.height / 2);
+                            ctx.rotate(rotation * random);
+                            ctx.translate(-canvas.width / 2, -canvas.height / 2);
+
+                            count++;
+                            rotation += 0.001;
+                            if (count < 3000) {
+                                window.requestAnimationFrame(draw);
+                            }
+                        }
+                    })
+
+
+                    canvas.ontouch = function () {
+                        document.body.removeChild(this);
+                        return true;
+                    }
+
+                    canvas.onmouseover = function () {
+                        document.body.removeChild(this);
+                        return true;
+                    }
                 }
             }
-        })
 
-        
-        canvas.ontouch = function(){
-            document.body.removeChild(this);
-            return true;
         }
-        
-        canvas.onmouseover = function(){
-            document.body.removeChild(this);
-            return true;
-        }
-  }
-  }
-    
-    }
-    screensaver(['keyring.png',
-    'keyring1.png',
-    'keyring2.png',
-    'light.png']);
+        screensaver(['keyringg.png',
+            'keyringgg.png',
+            'keyring.png']);
 
-    console.log(`
-           ;               ,           
-         ,;                 '.         
-        ;:                   :;        
-       ::                     ::       
-       ::                     ::       
-       ':                     :        
-        :.                    :        
-     ;' ::                   ::  '     
-    .'  ';                   ;'  '.    
-   ::    :;                 ;:    ::   
-   ;      :;.             ,;:     ::   
-   :;      :;:           ,;"      ::   
-   ::.      ':;  ..,.;  ;:'     ,.;:   
-    "'"...   '::,::::: ;:   .;.;""'    
-        '"""....;:::::;,;.;"""         
-    .:::.....'"':::::::'",...;::::;.   
-   ;:' '""'"";.,;:::::;.'""""""  ':;   
-  ::'         ;::;:::;::..         :;  
- ::         ,;:::::::::::;:..       :: 
- ;'     ,;;:;::::::::::::::;";..    ':.
+        console.log(`
+                           ;               ,
+                         ,;                 '.
+                        ;:                   :;
+                       ::                     ::
+                       ::                     ::
+                       ':                     :
+                        :.                    :
+                     ;' ::                   ::  '
+                    .'  ';                   ;'  '.
+                   ::    :;                 ;:    ::
+                   ;      :;.             ,;:     ::
+                   :;      :;:           ,;"      ::
+                   ::.      ':;  ..,.;  ;:'     ,.;:
+                    "'"...   '::,::::: ;:   .;.;""'
+                        '"""....;:::::;,;.;"""
+                    .:::.....'"':::::::'",...;::::;.
+                   ;:' '""'"";.,;:::::;.'""""""  ':;
+                  ::'         ;::;:::;::..         :;
+                 ::         ,;:::::::::::;:..       ::
+                 ;'     ,;;:;::::::::::::::;";..    ':.
 ::     ;:"  ::::::"""'::::::  ":     ::
- :.    ::   ::::::;  :::::::   :     ; 
-  ;    ::   :::::::  :::::::   :    ;  
-   '   ::   ::::::....:::::'  ,:   '   
-    '  ::    :::::::::::::"   ::       
-       ::     ':::::::::"'    ::       
-       ':       """""""'      ::       
-        ::                   ;:        
-        ':;                 ;:"        
-          ';              ,;'          
-            "'           '"            
-              '
+                 :.    ::   ::::::;  :::::::   :     ;
+                  ;    ::   :::::::  :::::::   :    ;
+                   '   ::   ::::::....:::::'  ,:   '
+                    '  ::    :::::::::::::"   ::
+                       ::     ':::::::::"'    ::
+                       ':       """""""'      ::
+                        ::                   ;:
+                        ':;                 ;:"
+                          ';              ,;'
+                            "'           '"
+                              '
 `);
 
-screensaver();
-</script>
+        screensaver();
+    </script>
 
 </body>
 </html>
